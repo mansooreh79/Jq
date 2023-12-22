@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>منو کافی شاپ</title>
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="script" href="./jq.js">
+</head>
+<body>
+  <div class="container mx-auto px-4 sm:px-8">
+    <header class="text-center">
+      <h1 class="text-4xl font-bold">منو کافی شاپ</h1>
+    </header>
+    <main>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-3">
+          <h2 class="text-xl font-bold">کافئین</h2>
+          <ul class="list-disc">
+            <li>قهوه</li>
+            <li>چای</li>
+            <li>اسپرسو</li>
+            <li>لاته</li>
+            <li>کاپوچینو</li>
+          </ul>
+        </div>
+        <div class="col-span-3">
+          <h2 class="text-xl font-bold">شیرینی</h2>
+          <ul class="list-disc">
+            <li>کیک</li>
+            <li>کلوچه</li>
+            <li>شیرینی</li>
+            <li>پاناکوتا</li>
+            <li>تارت</li>
+          </ul>
+        </div>
+        <div class="col-span-3">
+          <h2 class="text-xl font-bold">ساندویچ</h2>
+          <ul class="list-disc">
+            <li>ساندویچ مرغ</li>
+            <li>ساندویچ پنیر</li>
+            <li>ساندویچ ژامبون</li>
+            <li>ساندویچ هات داگ</li>
+            <li>ساندویچ سبزیجات</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center">
+      <p class="text-sm">
+        &copy; 2023 کافی شاپ
+      </p>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function() {
+      // روی هر آیتم منو کلیک کنید
+      $(".list-disc li").click(function() {
+        // کلاس active را به آن آیتم اضافه کنید
+        $(this).addClass("active");
+        // کلاس active را از سایر آیتم ها حذف کنید
+        $(".list-disc li").not(this).removeClass("active");
+      });
+    });
+  </script>
+</body>
+</html>
